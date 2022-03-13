@@ -86,12 +86,12 @@
 // document.body.append(btn);
 
 // Задание 7
-// let div = document.createElement("div");
-// div.classList = "square";
+let div = document.createElement("div");
+div.classList = "square";
 
-// div.addEventListener("mouseover", () => (div.style.backgroundColor = "green"));
-// div.addEventListener("mouseout", () => (div.style.backgroundColor = null));
-// document.body.append(div);
+div.addEventListener("mouseover", () => (div.style.backgroundColor = "green"));
+div.addEventListener("mouseout", () => (div.style.backgroundColor = null));
+document.body.append(div);
 
 // Задание 8
 // let div1 = document.createElement("div");
