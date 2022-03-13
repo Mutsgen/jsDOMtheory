@@ -38,13 +38,6 @@ function minusTimerValue() {
   }
 }
 
-// function timeStart() {
-//   secValue = parseInt(seconds.innerText);
-//     minValue = parseInt(minutes.innerText);
-//     let intevalId = setInterval()
-//   if(){}
-// }
-
 buttons.addEventListener("click", function (event) {
   if (!event.target.classList.contains("timer_btn")) return;
 
