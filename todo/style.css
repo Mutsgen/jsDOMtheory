@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(48, 45, 45, 0.932);
+}
+
+.container {
+  align-items: center;
+  display: block;
+  width: 35%;
+}
+.container * {
+  margin: 0 auto;
+  display: block;
+  justify-content: center;
+}
+.title {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  color: rgb(139, 196, 27);
+  margin: 10px;
+  letter-spacing: 2px;
+}
+
+.done {
+  background-color: rgb(84, 116, 20);
+}
+.done__text {
+  text-decoration: line-through;
+}
+
+.fast__container {
+  display: flex;
+  justify-content: space-between;
+  height: 5vh;
+  margin: 15px;
+}
+.fast__container .fast__input {
+  width: calc(100% - 20%);
+  padding-right: 5%;
+  padding-left: 2%;
+  border-radius: 10px;
+  font-size: 20px;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+}
+.fast__container .fast__input:focus-visible {
+  border: none;
+  outline-offset: 0px;
+  box-shadow: 5px 4px 5px rgb(0, 0, 0, 0.8);
+}
+.fast__container .fast__button {
+  width: 15%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+}
+.fast__container .fast__button:hover {
+  opacity: 0.9;
+}
+.fast__container .fast__button:active {
+  box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
+}
+.modal__button {
+  height: 5vh;
+  width: 75%;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+}
+
+.todo__list {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  list-style: none;
+  padding: 1% 2%;
+}
+.todo__list li {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid yellowgreen;
+  padding: 5px 10px;
+}
+.item__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+}
+
+.item__container .item__texts {
+  font-size: 20px;
+  word-wrap: break-word;
+  hyphens: manual;
+  width: 100%;
+  grid-column: 1/3;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+.todo__text {
+  text-align: center;
+  padding: 5px 0px 5px 5px;
+  font-size: 24px;
+}
+.todo__time {
+  text-align: right;
+  color: turquoise;
+}
+.item__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.ready__btn {
+  justify-content: space-between;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 5px;
+  width: 40%;
+}
+.delete__btn {
+  width: 40%;
+  padding: 5px;
+  justify-content: space-between;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+  text-align: center;
+}

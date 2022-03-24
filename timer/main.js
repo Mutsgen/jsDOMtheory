@@ -54,6 +54,8 @@ buttons.addEventListener("click", function (event) {
     addTimerValue(seconds, 1);
   } else if (event.target.classList.contains("clear_timer")) {
     clearInterval(intervalId);
+    startBtn.style.display = "block";
+    stopBtn.style.display = "none";
     minutes.innerText = "00";
     seconds.innerText = "00";
   } else if (event.target.classList.contains("stop_timer")) {
