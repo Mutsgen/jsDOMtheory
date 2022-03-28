@@ -6,13 +6,16 @@ export const CreateModalForm = (pos, posEl, _title = "Insert ToDo") => {
   const divContent = document.createElement("div");
   const modalForm = document.createElement("form");
   const title = document.createElement("h1");
+  const divInput = document.createElement("div");
   const inputToDo = document.createElement("input");
   const inputTime = document.createElement("input");
   const submitButton = document.createElement("button");
 
   popup.className = "popup";
+  modalForm.className = "modal__form";
   divContent.className = "modal__content";
   title.className = "modal__title";
+  divInput.className = "modal__divInput";
   inputToDo.className = "modal__input";
   inputTime.className = "modal__date";
   inputTime.setAttribute("type", "date");
@@ -22,19 +25,21 @@ export const CreateModalForm = (pos, posEl, _title = "Insert ToDo") => {
   inputToDo.placeholder = "Input ToDo";
   inputTime.placeholder = "Input date";
   submitButton.textContent = "Input";
-  popup.addEventListener("click", (event) => {
+  popup.addEventListener("mousedown", (event) => {
     if (document.querySelector(".popup") == null) return;
-    CloseModal(event, popup);
+    if (!event.target.classList.contains("popup")) return;
+    setTimeout(() => CloseModal(popup), 100);
   });
-  submitButton.addEventListener("click", (event) => {
+  modalForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (document.querySelector(".popup") == null) return;
     CreateToDoItem(posEl, inputToDo.value, String(inputTime.value));
-    CloseModal(event, popup);
+    setTimeout(() => CloseModal(popup), 50);
   });
 
   popup.append(divContent);
   divContent.append(modalForm);
-  modalForm.append(title, inputToDo, inputTime, submitButton);
+  modalForm.append(title, divInput, submitButton);
+  divInput.append(inputToDo, inputTime);
   pos.append(popup);
 };

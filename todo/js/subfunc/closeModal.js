@@ -1,11 +1,3 @@
-export const CloseModal = (event, popup) => {
-  if (
-    !(
-      event.target.classList.contains("popup") ||
-      event.target.classList.contains("modal__submit")
-    )
-  )
-    return;
-
+export const CloseModal = (popup) => {
   popup.remove();
 };
