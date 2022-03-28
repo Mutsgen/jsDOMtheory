@@ -55,7 +55,7 @@ body {
   border: 2px solid yellowgreen;
   font-size: 20px;
   color: yellowgreen;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
   box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
 }
 .fast__container .fast__input:hover {
@@ -63,7 +63,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .fast__container .fast__input:focus-visible {
@@ -78,7 +78,7 @@ body {
   border: 2px solid yellowgreen;
   font-size: 20px;
   color: yellowgreen;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
   box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
 }
 .fast__container .fast__button:hover {
@@ -86,7 +86,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .fast__container .fast__button:active {
   box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
@@ -103,7 +103,7 @@ body {
   border: 2px solid yellowgreen;
   font-size: 20px;
   color: yellowgreen;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
   cursor: pointer;
   box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
 }
@@ -113,7 +113,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .modal__button:active {
   box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
@@ -188,7 +188,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .ready__btn:active {
   box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
@@ -215,7 +215,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .delete__btn:active {
   box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
@@ -232,7 +232,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 /* .popup:target .modal__content {
@@ -251,10 +251,28 @@ body {
   border: 2px solid yellowgreen;
   font-size: 20px;
   color: yellowgreen;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
   box-shadow: 6px 8px 6px rgb(0, 0, 0, 1);
-  /* transform: translate(0px, -100%); */
-  /* opacity: 0; */
+  transform: translate(0px, -100%);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.modal__active {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 250px;
+  min-width: 600px;
+  height: 30%;
+  width: 30%;
+  background: #23122c;
+  border: 2px solid yellowgreen;
+  font-size: 20px;
+  color: yellowgreen;
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+  transform: translate(0px, 0px);
 }
 
 .modal__form {
@@ -284,7 +302,7 @@ body {
   border: 2px solid yellowgreen;
   font-size: 20px;
   color: yellowgreen;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .modal__submit {
   width: 40%;
@@ -294,7 +312,7 @@ body {
   border: 2px solid yellowgreen;
   font-size: 20px;
   color: yellowgreen;
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
   box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
   align-items: center;
 }
@@ -304,7 +322,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .modal__submit:active {
   box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
@@ -339,7 +357,7 @@ body {
   background: rgba(153, 205, 50, 0.5);
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
-  transition: all 0.8s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .swap__button:active {
   box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);

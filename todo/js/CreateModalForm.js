@@ -5,7 +5,7 @@ export const CreateModalForm = (pos, posEl, _title = "Insert ToDo") => {
   const popup = document.createElement("div");
   const divContent = document.createElement("div");
   const modalForm = document.createElement("form");
-  const title = document.createElement("h1");
+  const title = document.createElement("h2");
   const divInput = document.createElement("div");
   const inputToDo = document.createElement("input");
   const inputTime = document.createElement("input");
@@ -33,7 +33,7 @@ export const CreateModalForm = (pos, posEl, _title = "Insert ToDo") => {
   modalForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (document.querySelector(".popup") == null) return;
-    CreateToDoItem(posEl, inputToDo.value, String(inputTime.value));
+    CreateToDoItem(posEl, inputToDo.value, inputTime.value);
     setTimeout(() => CloseModal(popup), 50);
   });
 
@@ -42,4 +42,6 @@ export const CreateModalForm = (pos, posEl, _title = "Insert ToDo") => {
   modalForm.append(title, divInput, submitButton);
   divInput.append(inputToDo, inputTime);
   pos.append(popup);
+
+  setTimeout(() => (divContent.className = "modal__active"), 200);
 };
