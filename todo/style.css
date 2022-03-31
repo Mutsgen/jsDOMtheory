@@ -235,10 +235,6 @@ body {
   transition: all 0.3s ease 0s;
 }
 
-/* .popup:target .modal__content {
-  transform: translate(0px, 0px);
-  opacity: 1;
-} */
 .modal__content {
   justify-content: center;
   align-items: center;

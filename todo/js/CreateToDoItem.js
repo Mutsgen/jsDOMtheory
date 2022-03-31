@@ -1,4 +1,10 @@
-export const CreateToDoItem = (pos, value, _time = "") => {
+export const CreateToDoItem = (
+  pos,
+  value,
+  _time = "",
+  ready = false,
+  array = []
+) => {
   const li = document.createElement("li");
   const div = document.createElement("div");
   const divText = document.createElement("div");
@@ -16,6 +22,8 @@ export const CreateToDoItem = (pos, value, _time = "") => {
   divButtons.className = "item__buttons";
   readyButton.className = "ready__btn";
   deleteButton.className = "delete__btn";
+
+  if (ready) li.classList.add("done");
 
   if (value == "") return;
   p.textContent = value;
@@ -46,5 +54,8 @@ export const CreateToDoItem = (pos, value, _time = "") => {
   div.append(divText, divButtons);
   divText.append(p, time);
   divButtons.append(readyButton, deleteButton);
+  array.push({ name: value, time: _time, done: ready });
+  console.log(array);
+
   pos.append(li);
 };
