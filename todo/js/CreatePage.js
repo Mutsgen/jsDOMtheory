@@ -7,6 +7,7 @@ import { CreateToDoItem } from "./CreateToDoItem.js";
 import { CreateToDoList } from "./CreateToDoList.js";
 
 export const CreatePage = (name = "My") => {
+  const TestArr = [{ name: "bbb" }, { name: "bool" }];
   const arrayOfPrevious =
     JSON.parse(localStorage.getItem(JSON.stringify(name))) || [];
   const arrayOfNew = [];
