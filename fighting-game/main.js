@@ -291,10 +291,6 @@
       x: 0,
       y: 0,
     },
-    offset: {
-      x: 0,
-      y: 0,
-    },
     imageSrc: "./models/masked/Idle.png",
     framesMax: 7,
     scale: 2.5,
@@ -355,10 +351,6 @@
       x: 0,
       y: 0,
     },
-    offset: {
-      x: -50,
-      y: 0,
-    },
     imageSrc: "./models/akaji/Idle.png",
     framesMax: 7,
     scale: 2.5,
@@ -402,10 +394,10 @@
     },
     attackBox: {
       offset: {
-        x: -170,
+        x: -200,
         y: 50,
       },
-      width: 170,
+      width: 160,
       height: 50,
     },
   });
@@ -524,7 +516,7 @@
       player.health = 100;
       setTimeout(() => {
         window.location.reload();
-      }, 1000);
+      }, 3000);
     }
   }
 
@@ -540,7 +532,7 @@
           player.lastKey = "a";
           break;
         case "w":
-          if (player.velocity.y === 0) player.velocity.y = -20;
+          if (player.velocity.y === 0) player.velocity.y = -15;
           break;
         case " ":
           player.attack();
@@ -559,7 +551,7 @@
           enemy.lastKey = "ArrowLeft";
           break;
         case "ArrowUp":
-          if (enemy.velocity.y === 0) enemy.velocity.y = -20;
+          if (enemy.velocity.y === 0) enemy.velocity.y = -15;
           break;
         case "ArrowDown":
           enemy.attack();
