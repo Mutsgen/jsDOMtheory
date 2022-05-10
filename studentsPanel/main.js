@@ -1,7 +1,7 @@
 "use strict";
 
 import { createTitle } from "./module/createTitle.js";
-import { createTable } from "./module/cteateTable.js";
+import { createTable } from "./module/createTable.js";
 import { studentValid } from "./module/studentValid.js";
 
 (function () {
@@ -21,7 +21,7 @@ import { studentValid } from "./module/studentValid.js";
       id: 0,
       name: "Данила",
       firstName: "Попков",
-      lastName: "Владимирович",
+      lastName: "Владимирович12321312321321",
       birthDate: new Date("2004.07.21"),
       startDate: new Date("2020.09.01"),
       faculty: "ISaP",
