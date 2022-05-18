@@ -11,14 +11,16 @@ export const CreateToDoList = (
   pos.append(ul);
 
   for (let i = 0; i < arrayOfPrevious.length; i++) {
-    const li = CreateToDoItem(
-      ul,
-      arrayOfPrevious[i].name,
-      arrayOfPrevious[i].time,
-      arrayOfPrevious[i].done,
-      arrayNew
-    );
+    if (arrayOfPrevious[i].owner === name) {
+      const li = CreateToDoItem(
+        ul,
+        name,
+        arrayOfPrevious[i].name,
+        arrayOfPrevious[i].time,
+        arrayOfPrevious[i].done,
+        arrayNew
+      );
+    }
   }
-
   return ul;
 };

@@ -1,7 +1,7 @@
 import { CreateToDoItem } from "./CreateToDoItem.js";
 import { CloseModal } from "./subfunc/closeModal.js";
 
-export const CreateModalForm = (pos, posEl, array = []) => {
+export const CreateModalForm = (pos, owner, posEl, array = []) => {
   const popup = document.createElement("div");
   const divContent = document.createElement("div");
   const modalForm = document.createElement("form");
@@ -33,7 +33,14 @@ export const CreateModalForm = (pos, posEl, array = []) => {
   modalForm.addEventListener("submit", (event) => {
     event.preventDefault();
     if (document.querySelector(".popup") == null) return;
-    CreateToDoItem(posEl, inputToDo.value, inputTime.value, false, array);
+    CreateToDoItem(
+      posEl,
+      owner,
+      inputToDo.value,
+      inputTime.value,
+      false,
+      array
+    );
     setTimeout(() => CloseModal(popup), 50);
   });
 

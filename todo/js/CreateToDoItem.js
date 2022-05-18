@@ -1,5 +1,6 @@
 export const CreateToDoItem = (
   pos,
+  owner,
   value,
   _time = "",
   ready = false,
@@ -31,6 +32,7 @@ export const CreateToDoItem = (
   if (_time != "") {
     time.textContent = _time;
   } else {
+    _time = new Date().toISOString().slice(0, 10);
     time.textContent = new Date().toISOString().slice(0, 10);
   }
   readyButton.textContent = "Ready";
@@ -54,8 +56,12 @@ export const CreateToDoItem = (
   div.append(divText, divButtons);
   divText.append(p, time);
   divButtons.append(readyButton, deleteButton);
-  array.push({ name: value, time: _time, done: ready });
-  console.log(array);
+  array.push({
+    name: value,
+    owner: owner,
+    done: ready,
+    time: _time,
+  });
 
   pos.append(li);
 };
