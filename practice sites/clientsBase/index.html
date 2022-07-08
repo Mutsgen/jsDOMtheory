@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./main.js" defer type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./img/Group112.svg" alt="logo-skb" />
+        <input type="search" placeholder="Введите запрос" />
+      </header>
+      <main>
+        <div class="main-container">
+          <h1 class="main-title">Клиенты</h1>
+          <table class="table">
+            <thead class="table-head">
+              <tr>
+                <th class="id normal">
+                  <p>ID</p>
+                  <img src="./img/arrow-up.svg" alt="sort" />
+                </th>
+                <th class="fio normal">
+                  <p>Фамилия Имя Отчество</p>
+                  <div class="sort">
+                    <img src="./img/arrow-down.svg" alt="sort" />
+                    <p>А-Я</p>
+                  </div>
+                </th>
+                <th class="date-time normal">
+                  <p>Дата и время создания</p>
+                  <img src="./img/arrow-down.svg" alt="sort" />
+                </th>
+                <th class="last-change normal">
+                  <p>Последние изменения</p>
+                  <img src="./img/arrow-down.svg" alt="sort" />
+                </th>
+                <th class="contacts">
+                  <p>Контакты</p>
+                </th>
+                <th class="actions">
+                  <p>Действия</p>
+                </th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          <div class="preload">
+            <img src="./img/preload.svg" alt="preload" />
+          </div>
+          <button class="add-new-client">
+            <img src="./img/addNew.svg" alt="Add client" />
+            <p>Добавить клиента</p>
+          </button>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

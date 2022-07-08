@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 body {
   display: flex;
@@ -48,4 +49,121 @@ tr * {
   border: 1px solid rgb(0, 0, 0);
   font-size: 20px;
   text-align: center;
+}
+.modal_button {
+  margin-top: 2%;
+  margin-left: 35%;
+  height: 5vh;
+  width: 30%;
+  min-width: 300px;
+  min-height: 30px;
+  background-color: rgb(216, 107, 219);
+  border: 2px solid rgb(1, 20, 9);
+  font-size: 20px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+}
+
+.modal_button:hover {
+  opacity: 0.9;
+  background: rgba(153, 205, 50, 0.5);
+  box-shadow: 0 10px 12px 0 rgba(0, 0, 0, 0.24),
+    0 12px 40px 0 rgba(0, 0, 0, 0.19);
+  transition: all 0.3s ease 0s;
+}
+.modal_button:active {
+  box-shadow: 1px 2px 1px rgb(0, 0, 0, 0.6);
+  background-color: rgba(93, 124, 31, 0.5);
+  box-shadow: 0 5px 4px #666;
+  transform: translateY(1px);
+}
+
+.modal_back {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease 0s;
+}
+
+.content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 250px;
+  min-width: 600px;
+  height: 30%;
+  width: 30%;
+  background: #23122c;
+  border: 2px solid yellowgreen;
+  font-size: 20px;
+  color: yellowgreen;
+  transition: all 0.3s ease 0s;
+  box-shadow: 6px 8px 6px rgb(0, 0, 0, 1);
+  transform: translate(0px, -100%);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+.modal__active {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  min-height: 250px;
+  min-width: 600px;
+  height: 60%;
+  width: 50%;
+  background: #23122c;
+  border: 2px solid yellowgreen;
+  font-size: 20px;
+  color: yellowgreen;
+  transition: all 0.3s ease 0s;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+/* .modal__active input {
+  width: calc(100% - 20%);
+  min-width: 200px;
+  min-height: 30px;
+  padding-right: 5%;
+  padding-left: 2%;
+  background: none;
+  border: 2px solid yellowgreen;
+  font-size: 20px;
+  color: yellowgreen;
+  transition: all 0.3s ease 0s;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+} */
+.modal_form {
+  width: 80%;
+  height: 80%;
+  display: grid;
+}
+
+.modal_form * input {
+  margin: 0px 10px;
+  width: calc(100% / 2);
+  height: 40px;
+  padding-right: 2%;
+  padding-left: 2%;
+  background: none;
+  border: 2px solid yellowgreen;
+  font-size: 20px;
+  color: yellowgreen;
+  transition: all 0.3s ease 0s;
+}
+.addButton {
+  width: 40%;
+  margin: 0% 30%;
+  cursor: pointer;
+  background: none;
+  border: 2px solid yellowgreen;
+  font-size: 20px;
+  color: yellowgreen;
+  transition: all 0.3s ease 0s;
+  box-shadow: 2px 3px 2px rgb(0, 0, 0, 0.6);
+  align-items: center;
 }

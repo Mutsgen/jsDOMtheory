@@ -25,9 +25,11 @@ export const studentValid = (object) => {
   if (object.birthDate.getYear() > new Date().getYear()) return false;
 
   if (object.birthDate.getYear() === new Date().getYear()) {
-    if (object.birthDate.getMonth() <= new Date().getMonth()) {
-      if (object.birthDate.getDate() > new Date().getDate()) {
-        return false;
+    if (object.birthDate.getMonth() < new Date().getMonth() + 1) {
+      if (object.birthDate.getMonth() == new Date().getMonth()) {
+        if (object.birthDate.getDate() > new Date().getDate()) {
+          return false;
+        }
       }
     } else return false;
   }
@@ -38,20 +40,24 @@ export const studentValid = (object) => {
   if (object.startDate.getYear() > new Date().getYear()) return false;
 
   if (object.startDate.getYear() === new Date().getYear()) {
-    if (object.startDate.getMonth() <= new Date().getMonth()) {
-      if (object.startDate.getDate() > new Date().getDate()) {
-        return false;
+    if (object.startDate.getMonth() < new Date().getMonth() + 1) {
+      if (object.startDate.getMonth() == new Date().getMonth()) {
+        if (object.startDate.getDate() > new Date().getDate()) {
+          return false;
+        }
       }
     } else return false;
   }
 
-  if (object.startDate.getYear() < object.birthDate.getYear()) return false;
-  if (object.startDate.getYear() === object.birthDate.getYear()) {
-    if (object.startDate.getMonth() >= object.birthDate.getMonth()) {
-      if (object.startDate.getDate() < object.birthDate.getDate()) {
-        return false;
-      }
-    } else return false;
-  }
+  if (object.startDate.getYear() <= object.birthDate.getYear()) return false;
+  // if (object.startDate.getYear() === object.birthDate.getYear()) {
+  //   if (object.birthDate.getMonth() < object.startDate.getMonth() + 1) {
+  //     if (object.birthDate.getMonth() == object.startDate.getMonth()) {
+  //       if (object.startDate.getDate() > object.birthDate.getDate()) {
+  //         return false;
+  //       }
+  //     }
+  //   } else return false;
+  // }
   return true;
 };
